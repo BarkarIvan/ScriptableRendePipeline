@@ -15,7 +15,7 @@ public partial class CameraRenderer
 
     private CullingResults _cullingResults;
 
-    private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+    private static ShaderTagId unlitShaderTagId = new ShaderTagId("CustomRP");
 
 
     public void Render(ScriptableRenderContext context, Camera camera)
