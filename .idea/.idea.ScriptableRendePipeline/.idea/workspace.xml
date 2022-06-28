@@ -8,18 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ScriptableRendePipeline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ScriptableRendePipeline/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CameraRenderer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Common.hlsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Common.hlsl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/UnityInput.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/UnityInput.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipelineAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipelineAsset.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Unlit.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Unlit.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/UnlitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/UnlitPass.hlsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomUnlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomUnlit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InstancingTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InstancingTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/halftone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/halftone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/noise.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/noise.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +47,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -98,7 +93,7 @@
       <workItem from="1656338374995" duration="7418000" />
       <workItem from="1656362552916" duration="2245000" />
       <workItem from="1656364890482" duration="6761000" />
-      <workItem from="1656405686007" duration="9165000" />
+      <workItem from="1656405686007" duration="12825000" />
     </task>
     <servers />
   </component>
@@ -109,6 +104,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

@@ -20,7 +20,7 @@ public class InstancingTest : MonoBehaviour
       for (int i = 0; i < _matrices.Length; i++)
       {
          _matrices[i] = Matrix4x4.TRS(Random.insideUnitSphere * 10f, Quaternion.identity, Vector3.one);
-         _colors[i] = new Vector4(Random.value, Random.value, Random.value);
+         _colors[i] = new Vector4(Random.value, Random.value, Random.value,Random.value);
       }
 
       _matPropBlock = new MaterialPropertyBlock();

@@ -6,19 +6,22 @@ public class CustomRenderPipeline : RenderPipeline
 {
     
     private CameraRenderer _renderer = new CameraRenderer();
+    private bool useDynamicBatching, useGPUInstancing;
 
-
-    public CustomRenderPipeline()
+    public CustomRenderPipeline(bool useDynamicBatching, bool useGPUInstancing, bool useSRPBatching)
     {
+
+        this.useDynamicBatching = useDynamicBatching;
+        this.useGPUInstancing = useGPUInstancing;
         //SRP batching
-        GraphicsSettings.useScriptableRenderPipelineBatching = true;
+        GraphicsSettings.useScriptableRenderPipelineBatching = useSRPBatching;
     }
    
     protected override void Render(ScriptableRenderContext context, Camera[] cameras)
     {
         foreach (var camera in cameras)
         {
-            _renderer.Render(context, camera);
+            _renderer.Render(context, camera, useDynamicBatching, useGPUInstancing);
         }
     }
 }
