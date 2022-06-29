@@ -1,4 +1,3 @@
-
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -24,17 +23,26 @@ public class Lighting
     private static Vector4[] dirLightColors = new Vector4[_maxDirLightCount];
 
     private static Vector4[] dirLightDirections = new Vector4[_maxDirLightCount];
-    //private static int _dirLightColorId = Shader.PropertyToID("_DirectionalLightColor");
-    //private static int _dirLightDirectionId = Shader.PropertyToID("_DirectionalLightDirection");
 
-    public void Setup(ScriptableRenderContext context, CullingResults cullingResults)
+    private Shadows _shadows = new Shadows();
+
+
+    public void Setup(ScriptableRenderContext context, CullingResults cullingResults, ShadowSettings shadowSettings)
     {
         this._cullingResult = cullingResults;
         buffer.BeginSample(_bufferName);
-       SetupLights();
-       buffer.EndSample(_bufferName);
-       context.ExecuteCommandBuffer(buffer);
-       buffer.Clear();
+       
+        //shadows
+        _shadows.Setup(context, cullingResults, shadowSettings);
+        
+        SetupLights();
+        
+        //render shadows
+        _shadows.Render();
+        
+        buffer.EndSample(_bufferName);
+        context.ExecuteCommandBuffer(buffer);
+        buffer.Clear();
     }
 
     private void SetupLights()
@@ -51,16 +59,22 @@ public class Lighting
                 break;
             }
         }
-        
+
         buffer.SetGlobalInt(dirLightCountId, visibleLights.Length);
         buffer.SetGlobalVectorArray(dirLightColorsId, dirLightColors);
         buffer.SetGlobalVectorArray(dirLightDirectionsId, dirLightDirections);
     }
-    
+
     private void SetupDirectionalLight(int index, ref VisibleLight visibleLight)
     {
         dirLightColors[index] = visibleLight.finalColor;
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
-        
+        _shadows.ReserveDirShadows(visibleLight.light, index);
     }
+
+    public void Cleanup()
+    {
+        _shadows.Cleanup();
+    }
+    
 }

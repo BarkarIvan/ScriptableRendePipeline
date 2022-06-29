@@ -7,7 +7,9 @@ CBUFFER_START(UnityPerDraw)
     float4x4 unity_MatrixV;
     float4 unity_LODFad;
     real4 unity_WorldTransformParams;
+    float3 _WorldSpaceCameraPos;
 CBUFFER_END
+
 
 float4x4 unity_MatrixVP;
 float4x4 glstate_matrix_projection;

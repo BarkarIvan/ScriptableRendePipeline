@@ -20,7 +20,7 @@ public partial class CameraRenderer
 
     private Lighting _lighting = new Lighting();
     
-    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing)
+    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing, ShadowSettings shadowSettings)
     {
         this.context = context;
         this.camera = camera;
@@ -28,16 +28,22 @@ public partial class CameraRenderer
         PrepareBuffer();
         PrepareForSceneWindow();
         
-        if (!Cull())
+        if (!Cull(shadowSettings.MaxDistance))
         {
             return;
         }
-
+        
+        buffer.BeginSample(SampleName);
+        ExecuteBuffer();
+        _lighting.Setup(context, _cullingResults, shadowSettings);
+        buffer.EndSample(SampleName);
+        
         Setup();
-        _lighting.Setup(context, _cullingResults);
+        
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
         DrawGizmos();
+        _lighting.Cleanup();
         Submit();
     }
 
@@ -72,23 +78,22 @@ public partial class CameraRenderer
     }
 
 
-    bool Cull()
+    bool Cull(float maxShadowDistance)
     {
         if (!camera.TryGetCullingParameters(out ScriptableCullingParameters p)) return false;
+        p.shadowDistance = Mathf.Min(maxShadowDistance, camera.farClipPlane);
         _cullingResults = context.Cull(ref p);
         return true;
     }
 
     private void Setup()
     {
-        
-        
         context.SetupCameraProperties(camera);
         CameraClearFlags flags = camera.clearFlags;
         buffer.ClearRenderTarget(
             flags <= CameraClearFlags.Depth, 
             flags == CameraClearFlags.Color, 
-            flags == CameraClearFlags.Color ? camera.backgroundColor : Color.clear
+            flags == CameraClearFlags.Color ? camera.backgroundColor.linear : Color.clear
             );
         buffer.BeginSample(SampleName);
         ExecuteBuffer();

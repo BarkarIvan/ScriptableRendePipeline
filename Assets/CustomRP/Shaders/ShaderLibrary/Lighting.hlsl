@@ -7,17 +7,17 @@ half3 IncomingLight (Surface surface, Light light)
 }
 
 
-half3 GetLighting(Surface surface, Light light)
+half3 GetLighting(Surface surface, BRDF brdf, Light light)
 {
-    return IncomingLight(surface, light) * surface.color;
+    return IncomingLight(surface, light) *  DirectBRDF(surface, brdf, light);
 }
 
-half3 GetLighting(Surface surface)
+half3 GetLighting(Surface surface, BRDF brdf)
 {
-    half3 color = 0.0;
+   half3 color = 0.0;
     for(int i = 0; i < GetDirectionalLightCount(); i ++)
     {
-        color += GetLighting(surface, GetDirectionalLight(i));
+        color += GetLighting(surface, brdf, GetDirectionalLight(i));
     }
     return color;
 }

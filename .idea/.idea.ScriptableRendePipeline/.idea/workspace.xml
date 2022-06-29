@@ -6,13 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="23c079bd-80af-4046-b389-fcf7cde778b8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ScriptableRendePipeline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ScriptableRendePipeline/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomLit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomLit.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CameraRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/Custom Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/Custom Render Pipeline Asset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Unlit.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Unlit.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/UnlitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/UnlitPass.hlsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CustomUnlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomUnlit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipelineAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/CustomRenderPipelineAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Runtime/Lighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Runtime/Lighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Lit.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/Lit.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/LitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/LitPass.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Core.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Core.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Lighting.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Lighting.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Surface.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/Surface.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/UnityInput.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CustomRP/Shaders/ShaderLibrary/UnityInput.hlsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -34,16 +42,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/API/D3D11.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CustomRP/Runtime/ShadowSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/SpaceTransforms.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/DummyShaderLibrary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CustomRP/Runtime/Shadows.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/Common.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332c534a8a44623b2e5cc943a0b790e157400/bb/d482ada1/ScriptableRenderContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/CommonMaterial.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CustomRP/Runtime/Lighting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/SpaceTransforms.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/CommonDeprecated.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332c534a8a44623b2e5cc943a0b790e157400/87/eb14b60d/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InstancingTest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/DummyShaderLibrary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/ShaderLibrary/UnityInstancing.hlsl" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332c534a8a44623b2e5cc943a0b790e157400/64/68c141e3/RenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2B9x908AJcOZw22XZvavTEkAoju" />
@@ -99,7 +110,8 @@
       <workItem from="1656362552916" duration="2245000" />
       <workItem from="1656364890482" duration="6761000" />
       <workItem from="1656405686007" duration="18881000" />
-      <workItem from="1656492188134" duration="8572000" />
+      <workItem from="1656492188134" duration="24307000" />
+      <workItem from="1656534921872" duration="4591000" />
     </task>
     <servers />
   </component>
