@@ -20,7 +20,7 @@ Shader "Custom RP/Unlit"
        
         Pass {
             
-            Tags {"LightMode" = "CustomRP" }
+            Tags {"LightMode" = "CustomRPUnlit" }
             
             Blend [_SrcBlend] [_DstBlend]
             ZWrite [_ZWrite]

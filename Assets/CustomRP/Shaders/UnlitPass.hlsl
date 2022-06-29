@@ -35,7 +35,7 @@ Varyings UnlitPassVertex(Attributes i)
     o.positionCS = TransformObjectToHClip(i.positionOS);
 
     half4 mainTexST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _MainTex_ST);
-    o.texcoord0 = i.texcoord0 * mainTexST.xy + mainTexST.zw;
+    o.texcoord0 = mad(i.texcoord0, mainTexST.xy, mainTexST.zw);
 
     return o;
 }
