@@ -3,6 +3,7 @@
 
 #include "ShaderLibrary/Core.hlsl"
 #include "ShaderLibrary/Surface.hlsl"
+#include "ShaderLibrary/Shadows.hlsl"
 #include "ShaderLibrary/Light.hlsl"
 #include "ShaderLibrary/BRDF.hlsl"
 #include "ShaderLibrary/Lighting.hlsl"
@@ -57,6 +58,7 @@ half4 LitPassFragment (Varyings i) : SV_Target
     half4 mainMap = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex,i.texcoord0);
 
     Surface surface;
+    surface.position = i.positionWS;
     surface.normal = normalize(i.normalWS);
     surface.viewDirection = normalize(_WorldSpaceCameraPos - i.positionWS);
     surface.color = mainMap * UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);

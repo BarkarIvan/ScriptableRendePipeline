@@ -26,19 +26,21 @@ public partial class CameraRenderer
         this.camera = camera;
 
         PrepareBuffer();
-        PrepareForSceneWindow();
+        PrepareForSceneWindow(); //for world ui in scene view
         
+        //1. CULLING
         if (!Cull(shadowSettings.MaxDistance))
         {
             return;
         }
         
         buffer.BeginSample(SampleName);
-        ExecuteBuffer();
-        _lighting.Setup(context, _cullingResults, shadowSettings);
+        ExecuteBuffer(); 
+        
+        _lighting.Setup(context, _cullingResults, shadowSettings); //setup light and shadows
         buffer.EndSample(SampleName);
         
-        Setup();
+        Setup(); //Setup (send matrices etc) and clear
         
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
